@@ -18,6 +18,8 @@ def start(): #Sets up the user interface to allow users to change settings witho
     settleTime=int(input("Time between setting voltage and measurement in milliseconds "))
     aMode=bool(input("Alignment Mode (True or False) "))
     save=bool(input("Save data (True or False) "))
+    if (save):
+        headerS = str(input("Header string to add to file (sample type, settings, etc.:  "))
 
 start()
 
@@ -36,7 +38,7 @@ def acq():
                 vals=np.array([xdata[:],ydata[:]]) 
                 now = datetime.now()
                 current_time = now.strftime("%d_%m_%Y--%H-%M-%S")
-                np.savetxt(current_time+".csv",(vals[:][:]), delimiter=',')
+                np.savetxt(current_time+".csv",(vals[:][:]), delimiter=',', header=headerS)
             del xdata[:] #Deletes the old data to prevent the data arrays from growing past the final value
             del ydata[:]
             break #This halts the repetion from one point to the next, exiting the animation and stopping data collection when the t value reaches one step larger than the stop value
