@@ -8,6 +8,6 @@ The program is quite dependent on the nidaqmx package which enables commmunicati
 
 The code has some oddities with how it is written predominantly due to me being a physicist and engineer and not a computer scientist. Also, since most of my programming background is Verilog and C++, the code structure is colored by those languages. 
 
-If you have any improvements or questions, feel free to reach out to me! Madeline Crowley (***REMOVED***) 
+If you have any improvements or questions, feel free to reach out to me! [Madeline Crowley](mailto:maddiesgithubaddress@gmail.com) 
 
 A previous attempt at this project that was abandoned in favor of completely rewriting the code from scratch can be found [here](https://github.com/LiamCrowley/SurfaceSciencePython). This was were a large amount of the testing of the DAQ code and packages/API was done.
