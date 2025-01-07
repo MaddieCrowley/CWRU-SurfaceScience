@@ -7,6 +7,8 @@ import nidaqmx #Handles communication with the National Instruments DAQ
 from time import sleep #Handles waiting between setting voltage and reading the value off of the DAQ
 """
 Surface Science Code
+Copywrite (c) Madeline Crowley 
+https://www.github.com/maddiecrowley
 """
 
 def start(): #Sets up the user interface to allow users to change settings without needing to edit the code directly
