@@ -20,7 +20,7 @@ def start(): #Sets up the user interface to allow users to change settings witho
     settleTime=int(input("Time between setting voltage and measurement in milliseconds "))
     aMode=bool(input("Alignment Mode (True or False) "))
     save=bool(input("Save data (True or False) "))
-    if (save):
+    if (save=="True"):
         headerS = str(input("Header string to add to file (sample type, settings, etc.:  "))
     else: 
         headerS = ""
@@ -38,7 +38,7 @@ def acq():
             sleep(settleTime/1000) #Waits for a period of milliseconds before reading the voltage from the DAQ
             y=anIn.read()
         if t >= stopEV+stepEV:
-            if save: #If the user has decided to save the data, then this stores the data into a convient variable and writes it to a file with the current date and time as the title
+            if (save=="True"): #If the user has decided to save the data, then this stores the data into a convient variable and writes it to a file with the current date and time as the title
                 vals=np.array([xdata[:],ydata[:]]) 
                 now = datetime.now()
                 current_time = now.strftime("%d_%m_%Y--%H-%M-%S")
@@ -71,7 +71,7 @@ def update(data): #Handles updating the data array after every iteration
 
 
 
-ani = animation.FuncAnimation(fig,update,acq,interval=interval,save_count=100,init_func=init,repeat=aMode) #Sets up the animation to use the functions defined above
+ani = animation.FuncAnimation(fig,update,acq,interval=interval,save_count=100,init_func=init,repeat=(aMode=="True")) #Sets up the animation to use the functions defined above
 
 plt.show() #Shows the plot
     
