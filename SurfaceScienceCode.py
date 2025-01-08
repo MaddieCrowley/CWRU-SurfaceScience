@@ -22,6 +22,8 @@ def start(): #Sets up the user interface to allow users to change settings witho
     save=bool(input("Save data (True or False) "))
     if (save):
         headerS = str(input("Header string to add to file (sample type, settings, etc.:  "))
+    else: 
+        headerS = ""
 
 start()
 
