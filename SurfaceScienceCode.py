@@ -12,7 +12,7 @@ https://www.github.com/maddiecrowley
 """
 
 def start(): #Sets up the user interface to allow users to change settings without needing to edit the code directly
-    global startEV,stopEV,stepEV,aMode,save,interval,settleTime
+    global startEV,stopEV,stepEV,aMode,save,interval,settleTime,headerS
     startEV=float(input("Start eV value "))
     stopEV=float(input("Stop eV value "))
     stepEV=float(input("Step eV value "))
