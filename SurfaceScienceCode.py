@@ -18,8 +18,8 @@ def start(): #Sets up the user interface to allow users to change settings witho
     stepEV=float(input("Step eV value "))
     interval=int(input("Time between points in milliseconds "))
     settleTime=int(input("Time between setting voltage and measurement in milliseconds "))
-    aMode=bool(input("Alignment Mode (True or False) "))
-    save=bool(input("Save data (True or False) "))
+    aMode=(input("Alignment Mode (True or False) "))
+    save=(input("Save data (True or False) "))
     if (save=="True"):
         headerS = str(input("Header string to add to file (sample type, settings, etc.:  "))
     else: 
